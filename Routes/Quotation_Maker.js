@@ -70,16 +70,16 @@ router.post("/forgotpassword", async function (req, res) {
             res.status(401).send({ error: "invalid credentials" });
         } else {
             let transporter = nodemailer.createTransport({
-                host: "smtp.mailtrap.io",
-                port: 2525,
+                service: 'gmail',
+                host: 'smtp.gmail.com', 
                 auth: {
-                    user: "e3640a19473a56",
-                    pass: "8c72472b0a0da3",
+                    user: "shoukathali123@gmail.com",
+                    pass: "shoukath@123",
                 },
             });
             //Mail options
             let mailOptions = {
-                from: "nodemaililavenil@gmail.com",
+                from: "shoukathsandy@gmail.com",
                 to: email,
                 subject: "Reset Password - BrandFP",
                 html: `<h4>Hello,</h4><p>We've received a request to reset the password for the AdminFP 
