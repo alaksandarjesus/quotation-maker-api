@@ -71,7 +71,7 @@ router.post("/forgotpassword", async function (req, res) {
         } else {
             let transporter = nodemailer.createTransport({
                 service: 'gmail',
-                host: 'smtp.gmail.com', 
+                host: 'smtp.gmail.com',
                 auth: {
                     user: "shoukathali123@gmail.com",
                     pass: "shoukath@123",
